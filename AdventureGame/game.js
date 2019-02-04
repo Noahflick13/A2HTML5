@@ -16,6 +16,15 @@ Multiline comment
 //var PC = prompt("What is your name?");
 
 //confirm("So your name is "+PC);
+
+        var inventory = {
+            credits:1000,
+            lazerSword:0,
+            plasmaBomb:0,
+            shipMap:0,
+            beamGun:0,
+            
+        }
 Game();
 
 function Game(){
@@ -26,7 +35,12 @@ function Game(){
     Cell();
     
     function Cell(){
-        var jail = prompt("You slowly start to wake up. Your head is throbbing and in great pain. You try to remember what happened last night. You look around and notice your in some kind of jail cell...but the gravity feels low...and unearthly... \n -Look around \n -call for someone \n -look out the window");
+        var jail = prompt("You slowly start to wake up. Your head is throbbing and in great pain. You try to remember what happened last night. You look around and notice your in some kind of jail cell...but the gravity feels low...and unearthly... \n -Look around \n -call for someone \n -look out the window \n -go to shop demonstration");
+        
+        if(jail == "shop" || "shop demonstration"){
+        
+        shop();
+        }
         
         if(jail == "look around" || jail == "look"){
         
@@ -60,7 +74,7 @@ function Game(){
                         var wallFallsDown = prompt("You kick the wall as hard as you can once more!...but the ceiling collapses and your leg gets hit with debris. You can either n\ -make a run for it! n\ -wait for the guards and lie.");
                         
                         if(wallFallsDown == "make a run for it" || "run"){
-                            alert("You make a break for it!...but you have no idea where your running. You limp run out of your cell and head to the door. The door slides open and you hear the guards running from the right. you break left and make it 30 feet before you get shot in the chest and fall to the floor. Your attempt at escape was brave but you could not outrun a lazer beam.ß")
+                            alert("You make a break for it!...but you have no idea where your running. You limp run out of your cell and head to the door. The door slides open and you hear the guards running from the right. you break left and make it 30 feet before you get shot in the chest and fall to the floor. Your attempt at escape was brave but you could not outrun a lazer beam.")
                         }
                     }
                 }
@@ -69,6 +83,35 @@ function Game(){
         
         function Yell(){
             var callForSomeone = prompt("You yell for someone to talk to. Two alien guards open the door and approach you. What do you choose to say? \n -i come in peace \n -why am i in here \n -let me out of here");
+        }
+    
+        function shop(){
+            var spaceShop = prompt("Welcome to the space shop. what would you like to buy? \n -lazer sword \n -plasma bomb \n -ship map \n -beam gun \n -leave");
+            
+                if(spaceShop == "lazer sword" || "buy lazer sword" && inventory.credits >= 100){
+                    var lazerSwordBuy = confirm("do you really need a lazer sword? you might burn or even kill yourself with it.");
+                    if(lazerSwordBuy){
+                        //adds sword
+                        inventory.lazerSword ++;
+                        //displays swords owned
+                        alert("you own " +inventory.lazerSword+" swords");
+                        //takes money
+                        inventory.credits = inventory.credits - 100;
+                        //displays coins left
+                        alert("you have "+inventory.credits" credits remaining");
+                        shop();
+                    }
+                    if(spaceShop == "plasma bomb" || "buy plasma bomb" && inventory.credits >= 100){
+                        var bombBuy = confrim("do you really want to buy a plasma bomb? you realize if you accidentally set this off you could potentialy destroy hundreds and maybe thousands of planets. oh and you would also be dead. do you really want this?");
+                        if(bombBuy){
+                            inventory.plasmaBomb ++;
+                            alert("you now own " +inventory.plasmaBomb+" plasma bombs");
+                            inventory.credits = inventory.credits - 100;
+                            alert("you have "+inventory.credits" credits remaining");
+                            shop();
+                        }
+                    }
+                }
         }
         
 
