@@ -42,6 +42,12 @@ function Game(){
 }
         function Window(){
             var windowCheck = prompt("You look out the window and stare into deep space. Stars surround you and meteors fly off in the distance. You can either \n -Try to break window \n -walk away");
+                if(windowCheck == "Try to break window"){
+                    var windowbreak = prompt("you set yourself up to punch the glass. You pull your arm back and hit the window as hard as you can. The window cracks and you hear the air being vaccumed out of your cell slowly. Alarms start blaring and your captors are alerted \n -try to cover the window \n -punch window again. \n -lie to the captors");
+                    if(windowbreak == "punch window again"){
+                        var windowbroken = alert("you get ready to punch the window one last time. As you begin to launch your fist at the window the guards come through the door. your fist connects with the glass and shatters. you, the guards, and everything in your cell get sucked into space. You have a short ammount of breath still in your lungs that you hold onto desperately, but the cold space around you makes you freeze and you start drifting toward a random planet. ")
+                    }
+                }
         }
         
         function LOOK(){
@@ -63,7 +69,7 @@ function Game(){
         }
     
         function shop(){
-            var spaceShop = prompt("Welcome to the space shop. what would you like to buy? \n -lazer sword \n -plasma bomb \n -ship map \n -beam gun \n -leave");
+            var spaceShop = prompt("Welcome to the space shop. what would you like to buy? \n -lazer sword \n -leave");
             
                 if(spaceShop == "lazer sword" && inventory.credits >= 100){
                     var lazerSwordBuy = confirm("do you really need a lazer sword? you might burn or even kill yourself with it.");
@@ -86,7 +92,7 @@ function Game(){
             var wallInt = prompt("You inspect the old wall, you see that it is cracked and possibly breakable. \n -kick wall \n -throw your body into the wall \n -leave wall alone");
                 
                     if(wallInt == "kick wall"){
-                        var kickingWall = prompt("You kick the wall with all your might. the crack gets bigger, but dust falls from the ceiling. it might be dangerous to kick again, but it could lead to a way out. n\ -kick the wall again n\ back away");
+                        var kickingWall = prompt("You kick the wall with all your might. the crack gets bigger, but dust falls from the ceiling. it might be dangerous to kick again, but it could lead to a way out. \n -kick wall again \n -back away");
                     
                         if(kickingWall == "kick wall again"){
                             var wallFallsDown = prompt("You kick the wall as hard as you can once more!...but the ceiling collapses and your leg gets hit with debris. You can either n\ -make a run for it! n\ -wait for the guards and lie.");
@@ -109,6 +115,9 @@ function Game(){
         }
         function darkSide(){
             prompt("You're on the other side of your cell. You notice an emergency exit hatch in the corner of the room and a doorway that leads to the rest of the ship. \n -emergency exit \n -doorway")
+        }
+        function death(){
+            var deathcheck = confirm("you have died. Would you like to try again?");
         }
     
     var rand = Math.Floor(Math.Random()*3);
