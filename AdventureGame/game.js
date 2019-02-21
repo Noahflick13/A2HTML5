@@ -160,7 +160,19 @@ function Game(){
                     else if(wallDestroy == "jump into nearby closet"){
                         var inCloset = promp("you quickly step into a closet. you hear the guards run past searching for you. you decide to wait a few seconds before leaving. before you step out you hear a sound of snoring behind you. you slowly turn around and find a guard sleeping in a sleeping bag. his blaster is against the wall and his guard outfit is in a bag by his feet. do you \n -take his blaster and uniform \n -quickly leave");
                         if(inCloset == "quickly leave"){
-                            alert()
+                            alert("you jump out of the closet in fear that he might wake up. you keep running and you hear the guards coming back to the main hall way. You reach a door to an unknown room but it appears to be locked! The guards run up behind you and stab you through the chest.");
+                            Trump();
+                        }
+                        else if(inCloset == "take his blaster and uniform"){
+                            alert("you quietly take his uniform and blaster, you step out of the hallway and a pack of guards run past you unaware of your presence. you proceed to run down the hallway and find a door to the escape pods. The door requires a pass code.");
+                            var passcode = prompt("you look on the arm of the uniform to find a code that reads XR47, but you notice that there is also a code in your helmets HUD that reads 9235. what code do you choose to enter? \n -XR47 \n -9253");
+                            if(passcode == "9253"){
+                                alert("you input the passcode. the lights turn red and an alarm starts blaring. guards turn the corner to see that your trying desperately to open the door. they all take aim and fire their blasters.");
+                                Trump();
+                            }
+                            else if(passcode == "XR47"){
+                                alert("you input the passcode. you hear the door unlock and proceed to enter. You step in the first escape pod you see and press the EMERGENCY LAUNCH button. You hear a loud explosion and you begin jettesoning towards the planet below. the escape pod flashes the fasten seatbelt sign. moments later you hear a loud BOOM outside. It appears you broke the sound barrier, your pod deploys a parachute and you float to the ground. kicking open the door you find yourself in a sandy desert, with a town off in the distance...Congrats player you have successfully escaped.");
+                            }
                         }
                     }
                     
@@ -169,24 +181,45 @@ function Game(){
             }
         function Lazarbeam(){
             alert("You back up as far as you can. You charge at the lazers with everything you have!");
-            var lazerChance = ["got killed", "made it through alive", "made it through, but you are severely injured"];
-            alert("You "+lazerChance[Math.floor(Math.random()* 2)]+"!");
+           var lazerChance = [Math.floor(Math.random()* 3)];
                 
-            if(lazerChance == 1){
+            if(lazerChance == 0){
+                death();
+            }
+            else if(lazerChance == 1){
                 darkSide();
+            }
+            else if(lazerchance == 2){
+                chicken();
+            }
+            else if(lazerchance == 3){
+                chicken();
             }
         }
         function darkSide(){
-            prompt("You're on the other side of your cell. You notice an emergency exit hatch in the corner of the room and a doorway that leads to the rest of the ship. \n -emergency exit \n -doorway")
+            var dank = prompt("You're on the other side of your cell. You notice an emergency exit hatch in the corner of the room and a doorway that leads to the rest of the ship. \n -emergency exit \n -doorway");
+                if(dank == "emergency exit"){
+                    alert("you open the emegency exit and step into a small escape pod. you slam your fist into the launch button and jetteson towards the planet below. You hear a loud BOOM outside, it appears you broke the sound barrier. your pod deploys a parachute and you float gracefully to the ground. you open the door and find that you're on a desert planet and a small town off in the distance. congrats player, you escaped successfully.");
+                }
+            if(dank == "doorway"){
+                alert("you step out into the hallway. unfortunately you steped out as a guard was walking past. he looks over at you and stabs you for escaping.");
+                Lazarbeam();
+            }
         }
         function death(){
             var deathcheck = confirm("you have died. Would you like to try again?");
+            if(deathcheck){
+                Cell();
+            }
+            else{
+                alert("goodbye.")
+            }
         }
-    
-    var rand = Math.Floor(Math.Random()*3);
-    
-    var chance = [death(), win(), lose()];
-    
+        
+        function chicken(){
+            alert("you sprint at the lazers but you chicken out and crash into the wall");
+            Lazarbeam();
+        }
     
 
 }
