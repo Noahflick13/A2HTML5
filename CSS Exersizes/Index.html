@@ -23,21 +23,109 @@
                 font-size:50px;
                 margin:5px 0 0 10px;
             }
+                
             div#box{
                 background-color:crimson;
                 width:100px;
                 height:100px;
                 position: absolute;
-                left: 300px;
-                top:300px;
+                left: 500px;
+                top:100px;
             }
             div#circle{
-                background-color:gold;
-                width:150;
-                height:150;
+                background-color:white;
+                width:20px;
+                height:20px;
+                border-radius: 100%;
+                position: absolute;
+                left: 150px;
+                top:330px;
+            }
+            div#triangle{
+                width: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-bottom: 100px solid blueviolet;
+                position: absolute;
+                left:400px;
+                top:100px;
+            }
+            div#yin-yang{
+                width: 96px;
+                box-sizing: content-box;
+                height: 48px;
+                background: white;
+                border-color: black;
+                border-style: solid;
+                border-width: 2px 2px 50px 2px;
+                border-radius: 100%;
+                position: relative;
+            }
+            div#yin-yang:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                background: white;
+                border: 18px solid black;
+                border-radius: 100%;
+                width: 12px;
+                height: 12px;
+                box-sizing: content-box;
+            }
+            div#yin-yang:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background: black;
+                border: 18px solid white;
+                border-radius: 100%;
+                width: 12px;
+                height: 12px;
+                box-sizing: content-box;
+            }
+            div#pacman {
+                width: 0px;
+                height: 0px;
+                border-right: 60px solid transparent;
+                border-top: 60px solid yellow;
+                border-left: 60px solid yellow;
+                border-bottom: 60px solid yellow;
+                border-top-left-radius: 60px;
+                border-top-right-radius: 60px;
+                border-bottom-left-radius: 60px;
+                border-bottom-right-radius: 60px;
+            }
+            div#circle2{
+                background-color:white;
+                width:20px;
+                height:20px;
+                border-radius: 100%;
                 position: absolute;
                 left: 200px;
-                top: 200px;
+                top:330px;
+            }
+            div#circle3{
+                background-color:white;
+                width:20px;
+                height:20px;
+                border-radius: 100%;
+                position: absolute;
+                left: 250px;
+                top:330px;
+            }
+            img#meme{
+                display:block;
+                width:auto;
+                height:auto;
+                border: dashed red;
+                position: absolute;
+                left:300px;
+                top:400px;
+                border-radius:30%;
+                box-shadow: 5px 5px 30px black;
             }
         </style>
     </head>
@@ -46,5 +134,12 @@
         <h3>Vol.1</h3>
         <div id="box"></div>
         <div id="circle"></div>
+        <div id="triangle"></div>
+        <div id="yin-yang"></div>
+        <div id="pacman"></div>
+        <div id="circle2"></div>
+        <div id="circle3"></div>
+        <img src="suplex.gif"
+             id="meme">
     </body>
 </html>
