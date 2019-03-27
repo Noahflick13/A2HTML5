@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<canvas id="myCanvas" width="800" height="600"style="border:10px dotted blue;">
+</canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        
+        ctx.fillStyle = "lime";
+        ctx.fillRect(0,0, 800, 600);
+        //lines
+        ctx.moveTo(0,0);
+        ctx.lineTo(800,600);
+        ctx.stroke();
+        ctx.moveTo(0,600);
+        ctx.lineTo(800,0);
+        ctx.stroke();
+        ctx.moveTo(0,300);
+        ctx.lineTo(800,300);
+        ctx.stroke();
+        ctx.moveTo(400,0);
+        ctx.lineTo(400,600);
+        ctx.stroke();
+        //circle
+        ctx.beginPath();
+        ctx.arc(400, 300, 150, 0, 2 * Math.PI);
+        ctx.stroke();
+        // gradient
+        var grd = ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0, "blue");
+        grd.addColorStop(1, "red");
+        ctx.fillStyle = grd;
+        ctx.fillRect(50, 0, 100, 100)
+        
+    </script>
+    
+</body>
+</html>
