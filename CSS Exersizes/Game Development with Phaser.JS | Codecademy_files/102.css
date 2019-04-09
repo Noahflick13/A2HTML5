@@ -1,0 +1,55 @@
+.progressDialContainer__aq9fVAqp3vC4ehmyzE3tl {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  justify-content: center; }
+  .progressDialContainer__aq9fVAqp3vC4ehmyzE3tl svg > circle:nth-child(2) {
+    stroke: #ffc740; }
+
+.radialProgressContainer__1G9u-eUxnYtwSBUIEf2S2d {
+  position: relative;
+  margin-right: 1rem; }
+  @media only screen and (min-width: 48rem) {
+    .radialProgressContainer__1G9u-eUxnYtwSBUIEf2S2d {
+      margin-right: 0; } }
+
+.progressIcon__3NKy6uBLHTiWXYg8bYox7g {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-46%, -57%);
+          transform: translate(-46%, -57%); }
+
+.dialText__3q3a3VS0inZgLtaiY-Hyen {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 0;
+  max-width: 7rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 0; }
+  @media only screen and (min-width: 48rem) {
+    .dialText__3q3a3VS0inZgLtaiY-Hyen {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem; } }
+
+@media only screen and (min-width: 48rem) {
+  .isLast__1fsGbO2HFLchWe191085Gc {
+    left: 18px; } }
+
+.dialContainer__y-3XzLUHbQsb3weu10NEP {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  justify-items: start;
+  grid-auto-rows: 12rem; }
+
+.progressDialLink__ZlBMy9uvqpMNX5D7z_Xey {
+  color: #484848; }
+  .progressDialLink__ZlBMy9uvqpMNX5D7z_Xey:hover {
+    text-decoration: none; }
+
+
+/*# sourceMappingURL=102.de1225156c4f27d4b278.chunk.css.map*/
