@@ -48,6 +48,8 @@ div#content{
     background-color:yellow;
 }
 
+
+/*
 nav{
     background-color: crimson;
     color:green;
@@ -68,7 +70,35 @@ nav ul li a{
 }
 nav ul li a:hover{
     background-color: chartreuse;
+
 }
+*/
+.icon-bar {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: forestgreen;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+.icon-bar a:hover {
+    background-color: limegreen;
+}
+
+.active {
+    background-color: forestgreen;
+}
+/*
 footer{
     position:absolute;
     bottom:0;
@@ -85,10 +115,6 @@ div.keepOpen{
 @media screen and (max-width: 600px) {
     div#container{
         width:100%
+        }
     }
-    
-    nav ul li a{
-        float:none;
-        text-align:center;
-    }
-}
+*/
