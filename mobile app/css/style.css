@@ -20,32 +20,39 @@ html,body,div,p,ul,ol,li,h1,h2,h3,h4,h5,h6
 }
 
 body{
-    background-color: bisque;
+    background-color: darkblue;
 }
 
 div#container{
     width:100%;
     
-    border:3px dashed antiquewhite;
-    background-color: saddlebrown;
+    border:3px solid cyan;
+    background-color: navy;
     
 }
 
 header{
     width:91%;
     padding:70px;
-    background-color:bisque;
+    background-color:darkblue;
+}
+
+header img#applogo{
+    display:block;
+    margin:auto;
+    width:100px;
 }
 
 header h1{
-    color:beige;
-    font-family: 'Press Start 2P', cursive;
+    color:ghostwhite;
+    text-align: center;
+    font-family: 'Michroma', cursive;
     font-size: 3em;
 }
 
 div#content{
     width:100%;
-    background-color:yellow;
+    background-color:aqua;
 }
 
 
@@ -78,7 +85,7 @@ nav ul li a:hover{
     bottom:0;
     left:0;
     width:100%;
-    background-color: forestgreen;
+    background-color: blue;
     overflow: auto;
 }
 
@@ -92,11 +99,11 @@ nav ul li a:hover{
     font-size: 36px;
 }
 .icon-bar a:hover {
-    background-color: limegreen;
+    background-color: cyan;
 }
 
 .active {
-    background-color: forestgreen;
+    background-color: blue;
 }
 /*
 footer{
