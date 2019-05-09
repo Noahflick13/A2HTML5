@@ -125,3 +125,27 @@ div.keepOpen{
         }
     }
 */
+
+div#product_grp{
+    width:auto;
+    margin:auto;
+}
+
+figure.product{
+    width:20%;
+    background-color: aqua;
+}
+
+figure.product img{
+    display:block;
+    padding:10px 0;
+    width:auto;
+    margin:auto;
+}
+
+figure.product figcaption{
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+    font-size:24px;
+}
