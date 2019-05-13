@@ -32,15 +32,9 @@ div#container{
 }
 
 header{
-    width:91%;
-    padding:70px;
+    width:94.2%;
+    padding:50px;
     background-color:darkblue;
-}
-
-header img#applogo{
-    display:block;
-    margin:auto;
-    width:100px;
 }
 
 header h1{
@@ -56,12 +50,12 @@ div#content{
 }
 
 
-/*
+
 nav{
-    background-color: crimson;
-    color:green;
-    font-family: 'Press Start 2P', cursive;
-    font-size 2.em;
+    background-color: Darkblue;
+    color:aqua;
+    font-family: 'Michroma', cursive;
+    font-size 1.5em;
 }
 nav ul{
     list-style: none;
@@ -71,15 +65,15 @@ nav ul li a{
     float:left;
     display:block;
     padding: 5px 15px;
-    border-right: 1px solid yellow;
-    color:green;
+    border-right: 1px solid aqua;
+    color:darkblue;
     text-decoration: none;
 }
 nav ul li a:hover{
-    background-color: chartreuse;
+    background-color: darkblue;
 
 }
-*/
+
 .icon-bar {
     position:absolute;
     bottom:0;
@@ -127,13 +121,29 @@ div.keepOpen{
 */
 
 div#product_grp{
-    width:auto;
+    max-width:60%;
+    min-width:20%;
     margin:auto;
 }
 
 figure.product{
     width:20%;
     background-color: aqua;
+}
+
+div.keepOpen{
+    clear:both;
+}
+
+@media screen and (max-width: 600px){
+    figure.product{
+        float:none;
+        margin:10px auto;
+        min-width:50%;
+        max-width:100%;
+        background-color: darkblue;
+        border-radius:5%;
+    }
 }
 
 figure.product img{
