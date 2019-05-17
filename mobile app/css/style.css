@@ -25,16 +25,21 @@ body{
 
 div#container{
     width:100%;
-    
     border:3px solid cyan;
     background-color: navy;
     
 }
 
 header{
-    width:94.2%;
-    padding:50px;
+    width:100%;
+
     background-color:darkblue;
+}
+
+header img#applogo{
+    display:block;
+    margin:auto;
+    width:140px
 }
 
 header h1{
@@ -75,7 +80,7 @@ nav ul li a:hover{
 }
 
 .icon-bar {
-    position:absolute;
+    position:fixed;
     bottom:0;
     left:0;
     width:100%;
@@ -127,35 +132,46 @@ div#product_grp{
 }
 
 figure.product{
-    width:20%;
-    background-color: aqua;
+    width:center;
+    background-color: auto;
 }
 
 div.keepOpen{
     clear:both;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 3000px){
     figure.product{
         float:none;
         margin:10px auto;
-        min-width:50%;
+        min-width:20%;
         max-width:100%;
         background-color: darkblue;
         border-radius:5%;
+    }
+    nav ul li a{
+        float:none;
+        text-align:center;
     }
 }
 
 figure.product img{
     display:block;
-    padding:10px 0;
-    width:auto;
+    width:130px;
     margin:auto;
 }
 
 figure.product figcaption{
     text-align: center;
-    color: black;
+    color: ghostwhite;
     font-family: sans-serif;
     font-size:24px;
+}
+
+legend, span, input, textarea{
+    display:block;
+    margin:auto;
+    text-align: center;
+    font-family: ;
+    color: black;
 }
